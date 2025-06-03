@@ -1,11 +1,11 @@
 # Bitwarden (Self-Hosted) + AWS RDS Deployment  
 
 ### **Overview**  
-- **Terraform + Docker Compose** setup for self-hosted Bitwarden (`vaultwarden`) with **AWS RDS PostgreSQL** as backend.  
+- **Terraform + Docker Compose** setup for self-hosted Bitwarden with **AWS RDS PostgreSQL** as backend.  
 - Includes SSL (HTTPS), automated certs, and infrastructure-as-code (IaC) deployment.  
 
 ### **Key Files**  
-- **`docker-compose.yml`** – Runs `vaultwarden` (Bitwarden-compatible server) with:  
+- **`docker-compose.yml`** – Runs `bitwarden` with:  
   - Nginx (SSL termination)  
   - Optional built-in PostgreSQL (or external RDS)  
 - **Terraform (`main.tf`)** – Provisions AWS resources:  
@@ -19,7 +19,6 @@
 3. **SSL**: Optional Let’s Encrypt or manual certs.  
 
 ### **Notes**  
-- **`vaultwarden`** is a lightweight Rust rewrite of Bitwarden.  
 - **Backups**: Ensure RDS snapshots/backups are configured.
 
 # Aurora PostgreSQL Database Setup
